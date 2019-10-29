@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="value"></div>
+    <div class="ref"></div>
+    <div class="result"></div>
+
+    <script>
+        //function declaration
+
+        function addNumbers(a,b,c) {
+            return a + b + c
+        }
+
+
+        //reference to the values
+
+        let num1 = 3, num2 = 4, num3 = 8;
+
+        //passing by reference
+
+        let byRef = addNumbers(num1, num2, num3)
+
+
+        //passing by value
+        let byValue = addNumbers(12, 15, 30)
+        
+
+
+        //getting the dom
+        let value = document.querySelector(".value")
+        let ref = document.querySelector(".ref")
+
+
+        // injecting the results to the dom
+        value.innerText = "Result by Value: " + byValue
+        ref.innerText = "Result by Reference: " + byRef
+    </script>
+</body>
+</html>
